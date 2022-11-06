@@ -20,7 +20,10 @@ export class HomeComponent implements OnInit {
     .subscribe((params) => {
        if (params.searchTerm) {
           this.foods = this.foodService.getAllFoodsBySerachTerm(params.searchTerm)
-       } else {
+       } else if (params.tag) {
+          this.foods = this.foodService.getAllFoodsByTag(params.tag)
+       }
+       else {
           this.foods = foodService.getAll()
        }
     })
