@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartialsComponent implements OnInit {
 
+
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
+
+
 
 }
