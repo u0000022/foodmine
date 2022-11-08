@@ -1,5 +1,12 @@
 <app-search></app-search>
 <app-tags></app-tags>
+<app-not-found
+ [visible]="!foods || !foods.length"
+ notFoundMessage = "Cart Page Is Empty"
+ resetLinkText="Resert Search"
+>
+</app-not-found>
+
 <ul>
   <li *ngFor = "let food of foods">
       <a routerLink="/food/{{food.id}}">
