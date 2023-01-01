@@ -10,8 +10,18 @@
  width : 28rem;
 }
 
+.error-list{
+  color: red;
+}
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.register {
+  display : flex;
+  justify-content: center;
+  align-items : center;
 }
