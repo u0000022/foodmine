@@ -25,6 +25,8 @@ import { DefaultButtonComponent } from './components/partials/default-button/def
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 import { LoadingComponent } from './components/partials/loading/loading.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
+import { PromtPageComponent } from './components/pages/promt-page/promt-page.component';
+import { PromtListPageComponent } from './components/pages/promt-list-page/promt-list-page.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     TextInputComponent,
     DefaultButtonComponent,
     RegisterPageComponent,
-    LoadingComponent
+    LoadingComponent,
+    PromtPageComponent,
+    PromtListPageComponent
   ],
   imports: [
     BrowserModule,

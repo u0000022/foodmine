@@ -4,6 +4,8 @@ import { CartPageComponent } from './components/pages/cart-page/cart-page.compon
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
+import { PromtListPageComponent } from './components/pages/promt-list-page/promt-list-page.component';
+import { PromtPageComponent } from './components/pages/promt-page/promt-page.component';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 
 const routes: Routes = [
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path : 'food/:id', component : FoodPageComponent },
   { path : 'cart-page', component : CartPageComponent },
   { path : 'login', component : LoginPageComponent },
+  { path : 'promt-list', component : PromtListPageComponent },
+  { path : 'promt/:id', component : PromtPageComponent },
   { path : 'register', component : RegisterPageComponent },
 ];
 

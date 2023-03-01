@@ -48,7 +48,6 @@ return {
    isAdmin: user.isAdmin,
    token: token
  };
-
 }
 
 router.post('/register', asyncHandler(

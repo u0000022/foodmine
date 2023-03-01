@@ -1,3 +1,28 @@
+export const sample_promts: any[] = [
+  {
+    id:'1',
+    name: 'Advanced-Brainstorming',
+    description : 'It’s easy to ask ChatGPT to generate a list of ideas for your next  project. But often they’re generic and lack authority. Instead, ask it to come up with new ideas or approaches on a familiar topic.',    
+    template : 'Topic: {How to be study more effectively.} For the topic above, brainstorm new ideas or approaches. Prioritize ideas that are uncommon or novel.',
+    favorite: false,
+    origins: ['alexanderfyoung.com'],
+    stars: 4.5,
+    imageUrl: 'assets/food-1.jpg',
+    tags: ['ChatGPT', 'Advanced'],
+  },
+  {
+    id:'2',
+    name: 'Get Hyper-Specific',
+    description : 'The more specific your prompt the better more specific ChatGPT’s response will be. Use colons to prime ChatGPT with as much information as possible. Niche down and avoid generic response like everyone else.',
+    template : 'Topic: How to create an online course For audience: Coaches with social followings of 10,000+ Content goal: Explain how to plan a course, record video course content and how to market a course Writing style: Clear, concise, conversational, logical', 
+    favorite: false,
+    origins: ['alexanderfyoung.com'],
+    stars: 4.5,
+    imageUrl: 'assets/food-1.jpg',
+    tags: ['ChatGPT', 'Advanced'],
+  }
+]
+
 export const sample_foods: any[] = [
   {
     id:'1',

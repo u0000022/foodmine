@@ -1,23 +1,23 @@
 <app-not-found
-[visible]="!food"
+[visible]="!promt"
 notFoundMessage = "Food Not Found"
 resetLinkText="Back To Home"
 >
 </app-not-found>
 
-<div *ngIf="food" class="container">
-  <img [src]="food.imageUrl" [alt]="food.name"/>
+<div *ngIf="promt" class="container">
+  <img [src]="promt.imageUrl" [alt]="promt.name"/>
 
   <div class="details">
     <div class="header">
       <span class="name">
-        {{food.name}}
+        {{promt.name}}
       </span>
-      <span class="favorite {{food.favorite? '': 'not'}}">❤</span>
+      <span class="favorite {{promt.favorite? '': 'not'}}">❤</span>
     </div>
     <div class="rating">
       <star-rating
-      [value]="food.stars"
+      [value]="promt.stars"
       [totalstars]="5"
       checkedcolor="red"
       uncheckedcolor="black"
@@ -26,19 +26,25 @@ resetLinkText="Back To Home"
     </star-rating>
     </div>
 
+    <div class="description">
+       {{promt.description}}
+    </div>
+
+    <blockquote>{{promt.template}}</blockquote>
+
     <div class="origins">
-      <span *ngFor="let origin of food.origins">
+      <span *ngFor="let origin of promt.origins">
         {{origin}}
       </span>
     </div>
 
     <div class="tags">
-      <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">
+      <a *ngFor="let tag of promt.tags" routerLink="/tag/{{tag}}">
         {{tag}}
       </a>
     </div>
 
-    <div class="cook-time">
+  <!--   <div class="cook-time">
       <span>
         Time to cook about <strong>{{food.cookTime}}</strong> minutes
       </span>
@@ -49,8 +55,9 @@ resetLinkText="Back To Home"
         {{food.price | currency}}
       </span>
     </div>
-
+  -->
     <button (click)="addToCart()" >Add To Cart</button>
 
   </div>
 </div>
+

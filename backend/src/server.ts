@@ -1,8 +1,9 @@
 import express from "express"
 import cors from "cors"
 import dotenv from 'dotenv'
-import foodRouter from './routers/food.router'
-import userRouter from './routers/user.router'
+import foodRouter  from './routers/food.router'
+import userRouter  from './routers/user.router'
+import promtRouter from './routers/promt.router'
 import { dbConnect } from "./configs/database.config"
 
 dotenv.config()
@@ -17,6 +18,7 @@ app.use(cors({
 
 app.use("/api/foods", foodRouter)
 app.use("/api/users", userRouter)
+app.use("/api/promts", promtRouter)
 
 const port = 5000
 app.listen(port, () => {

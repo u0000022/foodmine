@@ -1,0 +1,54 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found
+ [visible]="!promts || !promts.length"
+ notFoundMessage = "Cart Page Is Empty"
+ resetLinkText="Resert Search"
+>
+</app-not-found>
+
+<ul>
+  <li *ngFor = "let promt of promts">
+      <a routerLink="/promt/{{promt.id}}">
+        <img [src]="promt.imageUrl" [alt] = "promt.name" />
+        <div class="content">
+          <div class="name">
+            {{promt.name}}
+          </div>
+          <span class="favorite {{promt.favorite?'':'not'}}">
+            ❤
+          </span>
+          <div class="stars">
+             <star-rating
+               [value] = "promt.stars"
+               [totalstars] = "5"
+               checkedcolor = red
+               uncheckedcolor = "black"
+               size = "22px"
+               [readonly] = "true"
+              >
+             </star-rating>
+          </div>
+          <div class="product-item-footer">
+            <div class="origins">
+              <span *ngFor="let origin of promt.origins">
+                  {{ origin}}
+              </span>
+            </div>
+
+            <div class="cook-time">
+               <span>🕒</span>
+               {{promt.description}}
+            </div>
+
+            <!-- <div class="price">
+              <span>{{food.price | currency}}</span>
+            </div> -->
+
+
+          </div>
+        </div>
+      </a>
+  </li>
+</ul>
+
